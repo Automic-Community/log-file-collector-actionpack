@@ -10,5 +10,5 @@ binaries:
     resources:
       - name: LOGTOOL.JAR
         type: BINARY
-        path: tools/dm-tool/target/log-tool.jar
+        path: tools/log-tool/target/log-tool.jar
         version: 1.0.0
