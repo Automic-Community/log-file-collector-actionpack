@@ -6,7 +6,7 @@ source: ae
 # binary object resource mapping will be defined here
 binaries:
 
-  - object: RESOURCES/LIBS/PCK.AUTOMIC_LOGTOOL.PRV.STORE
+  - object: RESOURCES/LIBS/PCK.AUTOMIC_LOG.PRV.STORE
     resources:
       - name: LOGTOOL.JAR
         type: BINARY

@@ -620,7 +620,7 @@ public class CmdLineParser {
 
         printDescription();
 
-        FeatureUtil.logMsg("\r\nUSAGE: java -jar tool-template.jar " + packageName + " " + feature + " [arguments]");
+        FeatureUtil.logMsg("\r\nUSAGE: java -jar log-tool.jar " + packageName + " " + feature + " [arguments]");
 
         if(optionHelpStringsRequired.size() > 0)
             FeatureUtil.logMsg("\r\nREQUIRED ARGUMENTS:\r\n");

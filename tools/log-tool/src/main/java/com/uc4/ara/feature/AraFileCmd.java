@@ -25,7 +25,7 @@ import com.uc4.ara.util.Logger;
 
 /**
  * Command line tool for ARA Deployment Management features
- * 
+ *
  * @author Roger Talkov
  * @version $Rev: 27244 $ $Date: 2011-12-07 15:35:51 -0800 (Wed, 07 Dec 2011) $
  */
@@ -39,23 +39,23 @@ public class AraFileCmd {
 	 *            parameters to pass to the class
 	 */
 	public static void main(String[] args) {
-		FeatureUtil.logMsg("tool-template", MsgTypes.GENERAL);
+		FeatureUtil.logMsg("log-tool", MsgTypes.GENERAL);
 		FeatureUtil.logMsg("(c) Automic Software GmbH", MsgTypes.GENERAL);
-		try {			
+		try {
 			FeatureUtil.logMsg("Version: "
-					+ FeatureUtil.getCompiledVersion("tool-template"), MsgTypes.GENERAL);
-			
+					+ FeatureUtil.getCompiledVersion("log-tool"), MsgTypes.GENERAL);
+
 			FeatureUtil.logMsg("Date: "
 					+ FeatureUtil
-					.getCompiledDate("tool-template"), MsgTypes.GENERAL);
+					.getCompiledDate("log-tool"), MsgTypes.GENERAL);
 			FeatureUtil.logMsg("");
 		} catch (IOException ei) {
 			// ignore the exception
 		}
 		try {
 			//print general help message
-			String pkg = AraFileCmd.class.getPackage().getName(); 
-			
+			String pkg = AraFileCmd.class.getPackage().getName();
+
 			if(args.length == 0)
 				FeatureUtil.printGeneralHelp(pkg);
 			else if (!FeatureUtil.packageExists(pkg, args[0]))
@@ -81,7 +81,7 @@ public class AraFileCmd {
 						FeatureUtil.logMsg("Execute: arb -cmd execute %COMMAND%");
 						FeatureUtil.logMsg("Password: arb -cmd cipher encrypt/decrypt text/password");
 					}
-	
+
 				}else{
 					// package
 					String className = pkg + '.' + args[0].toLowerCase() + '.'
@@ -92,15 +92,15 @@ public class AraFileCmd {
 					String[] params = new String[args.length - 2];
 					for (int i = 2, n = args.length; i < n; i++)
 						params[i - 2] = args[i];
-					
+
 					if(IFeatureDeprecated.class.isAssignableFrom(clazz))
 					{
 						IFeatureDeprecated instance = (IFeatureDeprecated) clazz.newInstance();
-						
+
 						// handle password decryption
 						params = handlePasswordDecryption(params);
-						
-						
+
+
 						// check the parameters
 						int ret = instance.checkParams(params);
 						if (ret != ErrorCodes.OK) {
@@ -126,12 +126,12 @@ public class AraFileCmd {
 							feature.initialize();
 							errorCode = feature.run(params);
 						} catch(Exception e) {
-							if(e.getClass().isAssignableFrom(IllegalStateException.class) && 
+							if(e.getClass().isAssignableFrom(IllegalStateException.class) &&
 									!AbstractInternalFeature.class.isAssignableFrom(feature.getClass()))
 								feature.printUsage();
-							
+
 							errorCode = ErrorCodes.EXCEPTION;
-							
+
 							Logger.logException(e);
 						} finally {
 							feature.finalize(errorCode);

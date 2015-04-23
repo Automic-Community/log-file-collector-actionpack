@@ -47,7 +47,7 @@ import org.xml.sax.SAXException;
 
 /**
  * static methods for log & debug messages.
- * 
+ *
  * @author Roger Talkov
  * @version $Rev: 27244 $ $Date: 2014/12/19 $
  */
@@ -125,29 +125,29 @@ public class FeatureUtil {
         /**
          * The INFO.
          */
-        INFO("tool-template: INFO: "),
+        INFO("log-tool: INFO: "),
         /**
          * The WARNING.
          */
-        WARNING("tool-template: WARNING: "),
+        WARNING("log-tool: WARNING: "),
         /**
          * The ERROR.
          */
-        ERROR("tool-template: ERROR: "),
+        ERROR("log-tool: ERROR: "),
         /**
          * The EXCEPTION.
          */
-        EXCEPTION("tool-template: EXCEPTION: "),
+        EXCEPTION("log-tool: EXCEPTION: "),
         /**
          * The FAULT_OTHER.
          */
-        FAULT_OTHER("tool-template: FAULT_OTHER: "),
+        FAULT_OTHER("log-tool: FAULT_OTHER: "),
         /**
          * The PARAM.
          */
-        PARAM("tool-template: PARAM: "),
+        PARAM("log-tool: PARAM: "),
 
-        GENERAL("tool-template: ");
+        GENERAL("log-tool: ");
         /**
          * The prefix.
          */
@@ -155,7 +155,7 @@ public class FeatureUtil {
 
         /**
          * Instantiates a new msg types.
-         * 
+         *
          * @param prefix
          *            the prefix
          */
@@ -165,7 +165,7 @@ public class FeatureUtil {
 
         /**
          * Gets the prefix.
-         * 
+         *
          * @return the prefix
          */
         String getPrefix() {
@@ -175,7 +175,7 @@ public class FeatureUtil {
 
     /**
      * Dbg msg.
-     * 
+     *
      * @param msg
      *            the msg
      */
@@ -190,7 +190,7 @@ public class FeatureUtil {
 
     /**
      * Checks if is dbg enabled.
-     * 
+     *
      * @return true if debug enabled
      */
     public static boolean isDbgEnabled() {
@@ -199,7 +199,7 @@ public class FeatureUtil {
 
     /**
      * Log msg.
-     * 
+     *
      * @param msg
      *            the msg
      */
@@ -209,7 +209,7 @@ public class FeatureUtil {
 
     /**
      * write a message to STDOUT and the log file.
-     * 
+     *
      * @param msg
      *            message text
      * @param type
@@ -228,7 +228,7 @@ public class FeatureUtil {
 
     /**
      * Log msg.
-     * 
+     *
      * @param t
      *            the t
      */
@@ -247,7 +247,7 @@ public class FeatureUtil {
 
     /**
      * read a text file.
-     * 
+     *
      * @param file
      *            the file
      * @return the file contents as a String
@@ -260,7 +260,7 @@ public class FeatureUtil {
 
     /**
      * Gets the file chars.
-     * 
+     *
      * @param fileName
      *            the file name
      * @return the file chars
@@ -274,7 +274,7 @@ public class FeatureUtil {
 
     /**
      * write a text file.
-     * 
+     *
      * @param chars
      *            character data
      * @param file
@@ -294,7 +294,7 @@ public class FeatureUtil {
 
     /**
      * Write file.
-     * 
+     *
      * @param chars
      *            the chars
      * @param fileName
@@ -310,7 +310,7 @@ public class FeatureUtil {
 
     /**
      * read the bytes of a file, mostly for reading jar files.
-     * 
+     *
      * @param file
      *            the file
      * @return the file contents as a byte array
@@ -332,7 +332,7 @@ public class FeatureUtil {
 
     /**
      * Gets the bytes of an inputstream.
-     * 
+     *
      * @param is
      *            the is
      * @return the file bytes
@@ -353,7 +353,7 @@ public class FeatureUtil {
 
     /**
      * convenience method to create an xml Document.
-     * 
+     *
      * @param xml
      *            the xml to parse
      * @return Document representing the xml
@@ -376,7 +376,7 @@ public class FeatureUtil {
 
     /**
      * Creates the document.
-     * 
+     *
      * @param xmlFile
      *            the xml file
      * @return the document
@@ -395,7 +395,7 @@ public class FeatureUtil {
 
     /**
      * format xml with 2 space indentation.
-     * 
+     *
      * @param doc
      *            Docment/Node containing the xml
      * @return a formatted String
@@ -438,7 +438,7 @@ public class FeatureUtil {
      * Gets the compiled version. This is performed by scanning the manifest.mf
      * files in the current jar and searching for the key
      * <code>Application-Version</code>
-     * 
+     *
      * @param manifestContentGroup
      *            the manifest content group
      * @return the compiled version
@@ -501,7 +501,7 @@ public class FeatureUtil {
 
     /**
      * Gets the compiled date.
-     * 
+     *
      * @param manifestContentGroup
      *            the manifest content group
      * @return the compiled date
@@ -517,12 +517,12 @@ public class FeatureUtil {
 
     /**
      * Repeats the character c count times and returns the result.
-     * 
+     *
      * @param c
      *            the character to repeat
      * @param count
      *            the number of times the character should be repeated.
-     * 
+     *
      * @return the resulting string
      */
     public static String repeat(char c, int count) {
