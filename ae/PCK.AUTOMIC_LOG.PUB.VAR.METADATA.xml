@@ -26,7 +26,7 @@
 <Variables>
 <row Name="Categories" Value="Other" Value1="" Value2="" Value3="" Value4=""/>
 <row Name="Company" Value="Automic Software GmbH" Value1="" Value2="" Value3="" Value4=""/>
-<row Name="Dependencies" Value="PCK.ITPA_SHARED &gt;= 1.0.0" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="Dependencies" Value="PCK.ITPA_SHARED ~&gt; 1.0.0" Value1="" Value2="" Value3="" Value4=""/>
 <row Name="Description" Value="The log file collector is able to collect relevant sections of all affected log files concerning an application component." Value1="" Value2="" Value3="" Value4=""/>
 <row Name="Homepage" Value="www.automic.com" Value1="" Value2="" Value3="" Value4=""/>
 <row Name="License" Value="" Value1="" Value2="" Value3="" Value4=""/>
