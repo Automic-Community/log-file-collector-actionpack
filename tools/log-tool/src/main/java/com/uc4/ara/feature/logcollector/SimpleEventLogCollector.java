@@ -147,7 +147,7 @@ public class SimpleEventLogCollector extends AbstractInternalFeature {
 	 * @throws IOException
 	 */
 	public void unpackNativeLibs() {
-		String[] libs = new String[] {"lib/sigar-x86-winnt.lib", "lib/sigar-x86-winnt.dll", "lib/sigar-amd64-winnt.dll"};
+		String[] libs = new String[] {"sigar-x86-winnt.lib", "sigar-x86-winnt.dll", "sigar-amd64-winnt.dll"};
 		for (String lib : libs) {
 			try {
 				String output = System.getProperty("user.dir") + System.getProperty("file.separator") + lib;
