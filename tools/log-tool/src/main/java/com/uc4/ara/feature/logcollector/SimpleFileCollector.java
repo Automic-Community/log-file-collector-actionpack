@@ -66,7 +66,8 @@ public class SimpleFileCollector extends AbstractInternalFeature implements ILog
         ArrayList<Log> logs = new ArrayList<Log>();
 
         //find files
-        String[] filesInPath = getFilesInPath(settings);
+        if(isValidDir(new File(settings.getBasePath()))) {
+            String[] filesInPath = getFilesInPath(settings);
 
         //filter affected files in timeframe
         String[] affectedFiles = this.getAffectedFiles(settings, filesInPath);
@@ -85,13 +86,11 @@ public class SimpleFileCollector extends AbstractInternalFeature implements ILog
             LogEntry entry = new LogEntry(lines, new Date());
 
             log.getLogEntries().add(entry);
-
         }
 
         //if specified create report
         Report report = new Report(logs.toArray(new Log[]{}), info, settings);
         Logger.log(report.toString(), this.loglevelValue);
-
 
         //if specified create zipfile
         File outputDirectory = new File(outputPathValue);
@@ -101,6 +100,11 @@ public class SimpleFileCollector extends AbstractInternalFeature implements ILog
         zipFile.saveReportToZipFile();
 
         return ErrorCodes.OK;
+        } else {
+            Logger.log("Directory " + settings.getBasePath() + " does not exist "
+                + "OR Input value is a file OR You don't have access permission to this directory!", this.loglevelValue);
+            return ErrorCodes.ERROR;
+        }
     }
 
     @Override
@@ -122,16 +126,9 @@ public class SimpleFileCollector extends AbstractInternalFeature implements ILog
                     {
                         files.add(fileName);
                     }
-
                 }
-
             }
         }
-        else
-        {
-            Logger.log("Directory " + settings.getBasePath() + " does not exist!", this.loglevelValue);
-        }
-
         return files.toArray(new String[]{});
     }
 
@@ -217,5 +214,9 @@ public class SimpleFileCollector extends AbstractInternalFeature implements ILog
         }
 
         return affectedLines.toArray(new String[]{});
+    }
+
+    private boolean isValidDir(File directory) {
+        return directory.exists() && directory.isDirectory();
     }
 }
