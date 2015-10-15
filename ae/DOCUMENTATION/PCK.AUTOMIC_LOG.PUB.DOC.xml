@@ -7,7 +7,9 @@
 <OH_SubType/>
 </HEADER>
 <DOCU_Docu state="1" type="text">
-<DOC/>
+<DOC>
+The log file collector is able to collect relevant sections of all affected log files concerning an application component.
+</DOC>
 </DOCU_Docu>
 </DOCU>
 </uc-export>
