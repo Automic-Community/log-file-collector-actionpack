@@ -13,7 +13,7 @@ ${_WORKING_DIR}    /
 Init Win Server
     [Documentation]    TODO: Write server description here
     Set Global Variable    ${/}    \\
-    Set Global Variable    ${_AGENT}    TC02AT03
+    Set Global Variable    ${_AGENT}    VVNWINDOWS01
     Set Global Variable    ${_LOGIN}    VVNSAT.LOGIN_ALL
     Set Global Variable    ${_WORKING_DIR}    C:${/}automic${/}testcases${/}PCK.AUTOMIC_LOG
     Set Global Variable    ${_LOGS}    ${_WORKING_DIR}${/}logs
@@ -22,7 +22,7 @@ Init Win Server
 Init Unix Server
     [Documentation]    TODO: Write server description here
     Set Global Variable    ${/}    /
-    Set Global Variable    ${_AGENT}    FL02AT03
+    Set Global Variable    ${_AGENT}    VVNUNIX01
     Set Global Variable    ${_LOGIN}    VVNSAT.LOGIN_ALL
     Set Global Variable    ${_WORKING_DIR}    ${/}opt${/}automic${/}testcases${/}PCK.AUTOMIC_LOG
     Set Global Variable    ${_LOGS}    ${_WORKING_DIR}${/}logs
