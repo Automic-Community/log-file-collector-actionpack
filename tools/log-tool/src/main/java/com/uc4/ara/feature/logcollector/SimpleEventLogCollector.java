@@ -90,8 +90,6 @@ public class SimpleEventLogCollector extends AbstractInternalFeature {
 		return ErrorCodes.OK;
 	}
 
-
-
 	public ArrayList<LogEntry> getLogEntriesInEventLog(Settings settings)
 			throws Exception {
 

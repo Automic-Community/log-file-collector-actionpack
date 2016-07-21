@@ -20,7 +20,6 @@ Init Win Server
     Set Global Variable    ${_LOGS}    ${_WORKING_DIR}${/}logs
     Set Global Variable    ${_OUTPUT}    ${_WORKING_DIR}${/}output
 
-
 Init Unix Server
     [Documentation]    TODO: Write server description here
     Set Global Variable    ${/}    /

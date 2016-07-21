@@ -26,7 +26,6 @@ public class ZipFile {
 		return this.zipFilePath;
 	}
 
-
 	public void saveReportToZipFile() throws Exception
 	{
 		saveReportToZipFile(true);

@@ -23,8 +23,6 @@ import java.util.Date;
  */
 public class LogTest extends TestCase {
 
-
-
 	private Log log;
 
 	public LogTest(String name) {

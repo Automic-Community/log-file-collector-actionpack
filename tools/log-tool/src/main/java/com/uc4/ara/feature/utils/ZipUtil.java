@@ -22,7 +22,6 @@ import java.util.zip.ZipOutputStream;
 import com.esotericsoftware.wildcard.Paths;
 import com.uc4.ara.feature.FeatureUtil;
 
-
 public class ZipUtil {
 	public static final void zipDirectory(File directory, File zip)
 			throws IOException {
@@ -91,7 +90,6 @@ public class ZipUtil {
 		archive.close();
 	}
 
-
 	/** Unzip a single file (fileName) in zipDir to destFile.
 	 * @param zipDir File to upzip
 	 * @param destFile
@@ -140,7 +138,6 @@ public class ZipUtil {
 		if(is != null)
 			is.close();
 	}
-
 
 	@SuppressWarnings("unchecked")
 	public static final void unzipFileInArchive(File zip, String relpathInZip, File extractTo)
@@ -282,7 +279,6 @@ public class ZipUtil {
 	public static void zipFile(File file, File zipFile) throws Exception {
 		byte[] buffer = new byte[8192];
 		int read = 0;
-
 
 		ZipOutputStream zos = new ZipOutputStream(
 				new FileOutputStream(zipFile));

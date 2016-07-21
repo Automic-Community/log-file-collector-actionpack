@@ -7,7 +7,6 @@ public class LogEntry {
 	private String[] entries;
 	private Date logDate;
 	
-	
 	public String[] getEntries()
 	{
 		return entries;

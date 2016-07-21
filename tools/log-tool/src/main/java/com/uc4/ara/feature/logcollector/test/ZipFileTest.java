@@ -68,8 +68,6 @@ public class ZipFileTest extends TestCase {
 		// Add additional tear down code here
 	}
 
-
-
 	/**
 	 * Run the void saveReportToZipFile() method test
 	 * @throws Exception

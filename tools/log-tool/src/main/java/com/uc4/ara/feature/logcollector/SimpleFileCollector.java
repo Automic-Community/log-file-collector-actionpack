@@ -27,7 +27,6 @@ public class SimpleFileCollector extends AbstractInternalFeature implements ILog
     private CmdLineParser.Option<String> lineCount;
     private CmdLineParser.Option<Boolean> isTopDown;
 
-
     @Override
     public void initialize() {
         super.initialize();

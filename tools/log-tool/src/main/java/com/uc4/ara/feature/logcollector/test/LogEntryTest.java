@@ -20,7 +20,6 @@ import java.util.Date;
  */
 public class LogEntryTest extends TestCase {
 
-
 	private LogEntry myEntry;
 
 	public LogEntryTest(String name) {
@@ -39,7 +38,6 @@ public class LogEntryTest extends TestCase {
 		entries.add("Testline 5");
 
 		myEntry = new LogEntry(entries.toArray(new String[]{}), new Date());
-
 
 	}
 
