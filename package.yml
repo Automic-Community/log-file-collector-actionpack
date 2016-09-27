@@ -11,4 +11,4 @@ binaries:
       - name: LOGTOOL.JAR
         type: BINARY
         path: tools/log-tool/target/log-tool.jar
-        version: 1.0.0
+        version: 1.0.1
