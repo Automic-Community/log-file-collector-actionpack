@@ -6,10 +6,11 @@ Force Tags        FILE    win    unix
 Test Template     File Template
 Resource          ../../resources/keywords.txt
 
-*** Test Cases ***    LOG_PATTERN    SECONDS    RETURN CODE    RETURN STATUS
-Get single file       Log1.txt       300        0              ${ENDED_OK - ended normally}
+*** Test Cases ***    LOG_PATTERN    SECONDS       RETURN CODE    RETURN STATUS
+Get single file       Log1.txt       300           0              ${ENDED_OK - ended normally}
 
-Get by wildcard       Log(.*).txt    300        0              ${ENDED_OK - ended normally}
+Get by wildcard       [Tags]         SMOKE_TEST
+                      Log(.*).txt    300           0              ${ENDED_OK - ended normally}
 
 *** Keywords ***
 File Template
