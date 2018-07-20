@@ -10,13 +10,12 @@
 <DOC><![CDATA[=================
 = Libraries =
 =================
-axis-jaxrpc version 1.4 Apache 2.0 Copyright (C) 2006 The Apache Software Foundation
-commons-discovery version 0.2 Apache 1.1 Copyright (C) 1999-2001 The Apache Software Foundation
 log4j version 2.0-rc1 Apache 2.0 Copyright (C) 2012 The Apache Software Foundation https://logging.apache.org/log4j/1.2/license.html
 logback-core, logback-classic, logback-access version 1.0.13 Eclipse Public License v1.0
 sigar version 1.6.4 Apache 2.0 Copyright (C) 2010 https://support.hyperic.com/display/SIGAR/Home
-wsdl4j version 1.6.2 Common Public License 1.0
 log4j-over-slf4j version 1.7.5 MIT (c) 2004-2013 QOS.ch
+slf4j-api version 1.7.25 MIT License (c) 2004-2013 QOS.ch
+wildcard version 1.0 BSD 3-clause License
 
 ==================
 = Licenses =
