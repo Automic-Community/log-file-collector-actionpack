@@ -30,7 +30,6 @@ Suite Setup
     Init AE And Package
 
 Init AE And Package
-    Prepare Package    PCK.AUTOMIC_LOG
     Action Connect    ${_AE_HOST}    ${_AE_PORT}    ${_AE_USER}    ${_AE_PASS}    ${_AE_TEMP_FOLD}
 
 Init Target Server
