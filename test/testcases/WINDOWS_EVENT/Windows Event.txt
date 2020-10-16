@@ -1,0 +1,28 @@
+*** Settings ***
+Documentation     NOTE:
+...               add note here
+Suite Setup       Suite Setup
+Force Tags        WINDOWS_EVENT    win
+Test Template     Windows Event Template
+Resource          ../../resources/keywords.txt
+
+*** Test Cases ***    EVENT_APPLICATION    SOURCES              RETURN CODE    RETURN STATUS
+Get Application Error logs
+                      Application          Application Error    0              ${ENDED_OK - ended normally}
+
+*** Keywords ***
+Windows Event Template
+    [Arguments]    ${event_application}    ${sources}    ${returnCode}    ${returnStatus}
+    Init Action    ${ACTION_WINDOWS_EVENT}
+    Action Set    ${PRT_WINDOWS_EVENT_APPLICATION}    ${event_application}
+    Action Set    ${PRT_WINDOWS_EVENT_SOURCES}    ${sources}
+    Action Set    ${PRT_WINDOWS_EVENT_OUTPUT_PATH}    ${_OUTPUT}
+    Action Set    ${PRT_WINDOWS_EVENT_HOURS}    3600
+    Action Set    ${PRT_WINDOWS_EVENT_MINUTES}    0
+    Action Set    ${PRT_WINDOWS_EVENT_SECONDS}    0
+    Action Set    ${PRT_WINDOWS_EVENT_LINE_COUNT}    500
+    Action Set    ${PRT_WINDOWS_EVENT_IS_TOP_DOWN}    YES
+    Action Execute
+    Action Report Should Be Found
+    Action Return Code Should Be    ${returnCode}
+    Action Return Status Should Be    ${returnStatus}

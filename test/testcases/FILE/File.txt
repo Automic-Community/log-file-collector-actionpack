@@ -1,0 +1,32 @@
+*** Settings ***
+Documentation     NOTE:
+...               add note here
+Suite Setup       Suite Setup
+Force Tags        FILE    win    unix
+Test Template     File Template
+Resource          ../../resources/keywords.txt
+
+*** Test Cases ***    LOG_PATTERN    SECONDS       RETURN CODE    RETURN STATUS
+Get single file       Log1.txt       300           0              ${ENDED_OK - ended normally}
+
+Get by wildcard       [Tags]         SMOKE_TEST
+                      Log(.*).txt    300           0              ${ENDED_OK - ended normally}
+
+*** Keywords ***
+File Template
+    [Arguments]    ${log_pattern}    ${seconds}    ${returnCode}    ${returnStatus}
+    Generate Dummy Logs
+    Generate Output Folder If Need
+    Init Action    ${ACTION_FILE}
+    Action Set    ${PRT_FILE_BASE_PATH}    ${_LOGS}
+    Action Set    ${PRT_FILE_LOG_PATTERN}    ${log_pattern}
+    Action Set    ${PRT_FILE_OUTPUT_PATH}    ${_WORKING_DIR}${/}output
+    Action Set    ${PRT_FILE_HOURS}    0
+    Action Set    ${PRT_FILE_MINUTES}    0
+    Action Set    ${PRT_FILE_SECONDS}    ${seconds}
+    Action Set    ${PRT_FILE_LINE_COUNT}    500
+    Action Set    ${PRT_FILE_IS_TOP_DOWN}    YES
+    Action Execute
+    Action Report Should Be Found
+    Action Return Code Should Be    ${returnCode}
+    Action Return Status Should Be    ${returnStatus}

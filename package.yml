@@ -1,0 +1,14 @@
+# Package Build Configuration
+name: PCK.AUTOMIC_LOG
+
+source: ae
+
+# binary object resource mapping will be defined here
+binaries:
+
+  - object: RESOURCES/LIBS/PCK.AUTOMIC_LOG.PRV.STORE
+    resources:
+      - name: LOGTOOL.JAR
+        type: BINARY
+        path: tools/log-tool/target/log-tool.jar
+        version: 1.0.2
