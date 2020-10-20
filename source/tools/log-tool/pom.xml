@@ -25,6 +25,8 @@
 			<groupId>com.esotericsoftware</groupId>
 			<artifactId>wildcard</artifactId>
 			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/lib/wildcard-1.0.jar</systemPath>
 		</dependency>
 
 		<dependency>
